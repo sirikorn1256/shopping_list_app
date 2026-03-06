@@ -87,8 +87,9 @@
 ## New icon app
 
 <p align="center">
-<img width="313" height="635" alt="เปลี่ยน icon app ใหม่" src="https://github.com/user-attachments/assets/bdced5c6-6ea6-46a0-ba18-3a0b03533f34" />
+<img width="715" height="1436" alt="เปลี่ยน icon app ใหม่" src="https://github.com/user-attachments/assets/7c7591e1-d786-4686-9940-b41db04da2d6" />
 </p>
+
 
 ---
 
