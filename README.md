@@ -40,11 +40,57 @@
 - **Networking:** `http` package (REST API Integration)
 
 
-## ผลลัพการทำงาน
-*(หมายเหตุ: ให้นำรูปภาพอัปโหลดเข้าโฟลเดอร์ใน GitHub แล้วนำ Link มาแปะแทนข้อความด้านล่าง)*
-- [รูปภาพหน้า Home Screen (grocery_list.png)]
-- [รูปภาพหน้า Add Item (new_item.png)]
-- [รูปภาพระบบเดาคำ Autocomplete (การเดาชื่อสินค้า.png)]
-- [รูปภาพระบบเลือกหมวดหมู่อัตโนมัติ (เลือก_หมวดหมู่_อัตโนมัติ.png)]
-- [รูปภาพหน้าจอ Dropdown หมวดหมู่ (หมวดหมู่.png)]
-- [รูปภาพฐานข้อมูลหลังบ้าน (Firebase.png)]
+## ผลลัพธ์การทำงานของแอป
+
+
+## โครงสร้าง
+
+<p align="center">
+<img width="317" height="385" alt="โครงสร้าง" src="https://github.com/user-attachments/assets/a2447458-bbdf-4fe3-a299-04bdead1d622" />
+</p>
+
+
+---
+
+## grocery_list
+
+<p align="center">
+lign="center">
+<imga<img width="709" height="1435" alt="grocery_list" src="https://github.com/user-attachments/assets/8d4142d7-a47c-4945-9494-dc30af1aa5c2")/>
+</p>
+![Uploading grocery_list.png…]()
+
+---
+
+## หน้า new_item
+
+<p align="center">
+<img width="709" height="1440" alt="new_item" src="https://github.com/user-attachments/assets/4bd5f68e-bd06-4841-913c-b63752de21d2" />
+</p>
+
+---
+
+## หน้า การเดาชื่อสินค้า
+
+<p align="center">
+<img width="705" height="1429" alt="การเดาชื่อสินค้า" src="https://github.com/user-attachments/assets/d4a5f8ac-bf0d-469e-8ec7-8ca5979990cf" />
+</p>
+
+---
+
+
+##  หน้า หมวดหมู่
+
+<p align="center">
+<img width="704" height="1431" alt=" หมวดหมู่" src="https://github.com/user-attachments/assets/b6d51cfa-708f-43a4-977f-50c8ee9d2bf0" />
+</p>
+
+---
+
+## หน้า เลือก หมวดหมู่ อัตโมัตฺ
+
+<p align="center">
+<img width="691" height="1427" alt="เลือก หมวดหมู่ อัตโมัตฺ" src="https://github.com/user-attachments/assets/b2116004-2816-472b-bdfd-6a8f5cf0c97d" />
+</p>
+
+
