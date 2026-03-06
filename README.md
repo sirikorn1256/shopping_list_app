@@ -81,4 +81,15 @@
 <img width="691" height="1427" alt="เลือก หมวดหมู่ อัตโมัตฺ" src="https://github.com/user-attachments/assets/b2116004-2816-472b-bdfd-6a8f5cf0c97d" />
 </p>
 
+---
+
+## Firebase 
+
+<p align="center">
+<img width="1411" height="1043" alt="Firebase " src="https://github.com/user-attachments/assets/0c8a1d19-3ac3-42ea-9b89-2bdad1abaf75" />
+</p>
+
+
+
+
 
