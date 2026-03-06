@@ -30,6 +30,7 @@
 - **Backend/Database:** Firebase Realtime Database
 - **Networking:** `http` package (REST API Integration)
 
+---
 
 ## ผลลัพธ์การทำงานของแอป
 
