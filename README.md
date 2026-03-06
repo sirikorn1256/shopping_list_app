@@ -55,8 +55,7 @@
 ## grocery_list
 
 <p align="center">
-lign="center">
-<imga width="709" height="1435" alt="grocery_list" src="https://github.com/user-attachments/assets/cdc4e5ab-2a08-4098-8963-46e3584d424c"/>
+<img width="709" height="1435" alt="grocery_list" src="https://github.com/user-attachments/assets/cdc4e5ab-2a08-4098-8963-46e3584d424c" />
 </p>
 
 ---
