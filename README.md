@@ -1,16 +1,54 @@
-# shopping_list_app
+# Shopping List App
 
-A new Flutter project.
+แอปพลิเคชันจัดการรายการซื้อของ (Shopping List) พัฒนาด้วย **Flutter** เน้นการออกแบบที่เรียบง่าย (Minimalist UI) คลีนๆ สไตล์ iOS และเชื่อมต่อข้อมูลแบบ Real-time ผ่าน **Firebase Realtime Database**
 
-## Getting Started
+--
+## Features (ฟีเจอร์เด่น)
+- **Smart Icons:** ระบบเปลี่ยนไอคอนหน้ารายการสินค้าให้อัตโนมัติตามหมวดหมู่และชื่อที่พิมพ์ (เช่น พิมพ์ Milk จะแสดงไอคอนแก้วน้ำ)
+- **Intelligent Autocomplete:** ระบบแนะนำชื่อสินค้าขณะพิมพ์ โดยกรองเฉพาะคำที่ขึ้นต้นด้วยตัวอักษรนั้นๆ (Starts with) เพื่อความรวดเร็วและแม่นยำ
+- **Auto-Category Selection:** ระบบเดาหมวดหมู่สินค้าอัตโนมัติจากชื่อที่กำลังพิมพ์ ทำงานประสานกับ Autocomplete ทันทีที่เลือกคำ
+- **Minimalist UI Design:** ปรับแต่งช่องกรอกข้อมูล (TextField) และ Dropdown ให้เป็นแบบขอบมน ใช้ `hintText` ซ่อนเส้นขอบ ตัดปัญหา UI ทับซ้อนเพื่อให้ดูทันสมัย
+- **Real-time Sync:** รองรับการเพิ่ม ลบ และแสดงผลข้อมูลทันทีผ่าน REST API ของ Firebase
 
-This project is a starting point for a Flutter application.
+--
+## Application Flow (โฟลว์การทำงานของระบบ)
+1. **หน้าจอหลัก (Home Screen):** เมื่อเปิดแอปพลิเคชัน ระบบจะทำการร้องขอข้อมูล (GET Request) จาก Firebase มาแสดงผลเป็นรายการพร้อมไอคอนประจำหมวดหมู่
+2. **หน้าเพิ่มสินค้า (Add Item):** - ผู้ใช้พิมพ์ตัวอักษรแรกในช่อง Name
+   - ระบบ Autocomplete จะแสดงรายการแนะนำสินค้า
+   - เมื่อผู้ใช้พิมพ์หรือเลือกชื่อสินค้า ระบบ Auto-Category จะเปลี่ยนหมวดหมู่ใน Dropdown ให้อัตโนมัติทันที
+   - ผู้ใช้ระบุจำนวน (Quantity) และกดปุ่ม Add Item
+3. **การบันทึกข้อมูล:** ระบบทำการเช็คความถูกต้อง (Validation) และส่งข้อมูล (POST Request) กลับไปยัง Firebase หากสำเร็จจะย้อนกลับมาหน้าหลักพร้อมอัปเดต UI ทันที
+4. **การลบสินค้า:** ผู้ใช้สามารถปัดซ้าย/ขวา (Swipe to dismiss) ที่รายการ เพื่อส่งคำสั่งลบข้อมูลออกจาก Firebase (DELETE Request)
 
-A few resources to get you started if this is your first Flutter project:
+--
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Known Issues & Solutions (ปัญหาที่พบและวิธีการแก้ไข)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**1. ปัญหาไม่สามารถรันบนระบบปฏิบัติการ Android ได้ (รองรับเฉพาะ iOS Simulator และ Chrome)**
+- **ปัญหา:** เมื่อทำการรันบน Android Emulator มักจะเกิด Error ขัดข้อง
+- **สาเหตุ:** เกิดจากปัญหา Version Mismatch ของ Flutter SDK/Packages บางตัวที่ใช้ในโปรเจกต์นี้ ไม่ตรงกับ Gradle เวอร์ชันปัจจุบันของฝั่ง Android
+- **วิธีการจัดการ:** ตัดสินใจรันทดสอบและพัฒนาบน **iOS Simulator** และ **Chrome** เป็นหลัก เนื่องจากการบังคับอัปเดตเวอร์ชัน SDK แบบ Global ในคอมพิวเตอร์ตอนนี้ **จะส่งผลกระทบทำให้โปรเจกต์เก่าๆ ที่อิงกับเวอร์ชันเดิมพัง (Build failed) ได้** จึงเลี่ยงการอัปเดตเพื่อรักษาเสถียรภาพของโปรเจกต์อื่นๆ ไว้ก่อน
+
+**2. ปัญหาหน้าจอแจ้งเตือน Error สีแดง (RenderFlex Overflow)**
+- **ปัญหา:** หน้าจอแสดงผล Error ขอบแดงเมื่อคีย์บอร์ดเด้งขึ้นมา หรือเมื่อช่อง Autocomplete พยายามขยายพื้นที่จนล้นหน้าจอ
+- **วิธีการแก้ไข:** ทำการแก้ปัญหาโดยนำ `SingleChildScrollView` มาครอบฟอร์มทั้งหมดเพื่อให้หน้าจอสามารถไถเลื่อนได้ และประยุกต์ใช้ `LayoutBuilder` ในการจำกัดขนาดความกว้างของหน้าต่าง Autocomplete ไม่ให้ล้นกรอบ
+
+**3. ปัญหาเส้นขอบ TextField ขาด/แหว่ง เมื่อใช้งานบน iOS**
+- **ปัญหา:** รูปแบบ Material Design ทำให้ตัวหนังสือ Label ลอยไปทับเส้นขอบ ซึ่งทำให้ UI ดูไม่คลีน
+- **วิธีการแก้ไข:** ปรับปรุง UI โดยเปลี่ยนจากการใช้ `labelText` มาเป็น `hintText` แทน พร้อมตั้งค่าขอบด้วย `OutlineInputBorder` สีเทาอ่อน เพื่อให้ได้ดีไซน์ที่เรียบง่ายและเป็นมิตรกับผู้ใช้งานมากขึ้น
+
+ Tech Stack
+- **Framework:** Flutter (Dart)
+- **Backend/Database:** Firebase Realtime Database
+- **Networking:** `http` package (REST API Integration)
+
+--
+
+## ผลลัพการทำงาน
+*(หมายเหตุ: ให้นำรูปภาพอัปโหลดเข้าโฟลเดอร์ใน GitHub แล้วนำ Link มาแปะแทนข้อความด้านล่าง)*
+- [รูปภาพหน้า Home Screen (grocery_list.png)]
+- [รูปภาพหน้า Add Item (new_item.png)]
+- [รูปภาพระบบเดาคำ Autocomplete (การเดาชื่อสินค้า.png)]
+- [รูปภาพระบบเลือกหมวดหมู่อัตโนมัติ (เลือก_หมวดหมู่_อัตโนมัติ.png)]
+- [รูปภาพหน้าจอ Dropdown หมวดหมู่ (หมวดหมู่.png)]
+- [รูปภาพฐานข้อมูลหลังบ้าน (Firebase.png)]
