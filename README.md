@@ -1,6 +1,6 @@
 # Shopping List App
 
-แอปพลิเคชันจัดการรายการซื้อของ (Shopping List) พัฒนาด้วย **Flutter** เน้นการออกแบบที่เรียบง่าย (Minimalist UI) คลีนๆ สไตล์ iOS และเชื่อมต่อข้อมูลแบบ Real-time ผ่าน **Firebase Realtime Database**
+แอปพลิเคชันจัดการรายการซื้อของ (Shopping List) พัฒนาด้วย **Flutter** เน้นการออกแบบที่เรียบง่าย และเชื่อมต่อข้อมูลแบบ Real-time ผ่าน **Firebase Realtime Database**
 
 ## Features (ฟีเจอร์เด่น)
 - **Smart Icons:** ระบบเปลี่ยนไอคอนหน้ารายการสินค้าให้อัตโนมัติตามหมวดหมู่และชื่อที่พิมพ์ (เช่น พิมพ์ Milk จะแสดงไอคอนแก้วน้ำ)
