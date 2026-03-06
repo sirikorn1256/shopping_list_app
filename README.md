@@ -56,9 +56,8 @@
 
 <p align="center">
 lign="center">
-<imga<img width="709" height="1435" alt="grocery_list" src="https://github.com/user-attachments/assets/8d4142d7-a47c-4945-9494-dc30af1aa5c2")/>
+<imga width="709" height="1435" alt="grocery_list" src="https://github.com/user-attachments/assets/cdc4e5ab-2a08-4098-8963-46e3584d424c"/>
 </p>
-![Uploading grocery_list.png…]()
 
 ---
 
