@@ -6,6 +6,7 @@
 - **Smart Icons:** ระบบเปลี่ยนไอคอนหน้ารายการสินค้าให้อัตโนมัติตามหมวดหมู่และชื่อที่พิมพ์ (เช่น พิมพ์ Milk จะแสดงไอคอนแก้วน้ำ)
 - **Intelligent Autocomplete:** ระบบแนะนำชื่อสินค้าขณะพิมพ์ โดยกรองเฉพาะคำที่ขึ้นต้นด้วยตัวอักษรนั้นๆ (Starts with) เพื่อความรวดเร็วและแม่นยำ
 - **Auto-Category Selection:** ระบบเดาหมวดหมู่สินค้าอัตโนมัติจากชื่อที่กำลังพิมพ์ ทำงานประสานกับ Autocomplete ทันทีที่เลือกคำ
+- **New icon app:** มีการเปลี่ยน icon app ให้มีความสวยงามขึ้น
 - **Minimalist UI Design:** ปรับแต่งช่องกรอกข้อมูล (TextField) และ Dropdown ให้เป็นแบบขอบมน ใช้ `hintText` ซ่อนเส้นขอบ ตัดปัญหา UI ทับซ้อนเพื่อให้ดูทันสมัย
 - **Real-time Sync:** รองรับการเพิ่ม ลบ และแสดงผลข้อมูลทันทีผ่าน REST API ของ Firebase
 
@@ -79,6 +80,14 @@
 
 <p align="center">
 <img width="691" height="1427" alt="เลือก หมวดหมู่ อัตโมัตฺ" src="https://github.com/user-attachments/assets/b2116004-2816-472b-bdfd-6a8f5cf0c97d" />
+</p>
+
+---
+
+## New icon app
+
+<p align="center">
+<img width="313" height="635" alt="เปลี่ยน icon app ใหม่" src="https://github.com/user-attachments/assets/bdced5c6-6ea6-46a0-ba18-3a0b03533f34" />
 </p>
 
 ---
