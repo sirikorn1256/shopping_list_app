@@ -85,7 +85,7 @@
 
 ---
 
-## หน้า เลือก หมวดหมู่ อัตโมัตฺ
+## หน้า การเลือกหมวดหมู่ อัตโนมัติ
 
 <p align="center">
 <img width="691" height="1427" alt="เลือก หมวดหมู่ อัตโมัตฺ" src="https://github.com/user-attachments/assets/b2116004-2816-472b-bdfd-6a8f5cf0c97d" />
